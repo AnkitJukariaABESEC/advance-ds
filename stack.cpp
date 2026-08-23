@@ -1,85 +1,85 @@
 // // Given a stack of size N,implement push and pop operations using the LIFO principle.Handle overflow and underflow conditions,and display the final contents of the stack.
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// class Stack
-// {
-//     int arr[100];
-//     int top;
-//     int size;
+class Stack
+{
+    int arr[100];
+    int top;
+    int size;
 
-// public:
+public:
 
-//     Stack(int n)
-//     {
-//         size = n;
-//         top = -1;
-//     }
+    Stack(int n)
+    {
+        size = n;
+        top = -1;
+    }
 
-//     void push(int val)
-//     {
-//         if(top == size - 1)
-//         {
-//             cout << "Stack Overflow" << endl;
-//             return;
-//         }
+    void push(int val)
+    {
+        if(top == size - 1)
+        {
+            cout << "Stack Overflow" << endl;
+            return;
+        }
 
-//         top++;
-//         arr[top] = val;
-//     }
+        top++;
+        arr[top] = val;
+    }
 
-//     void pop()
-//     {
-//         if(top == -1)
-//         {
-//             cout << "Stack Underflow" << endl;
-//             return;
-//         }
+    void pop()
+    {
+        if(top == -1)
+        {
+            cout << "Stack Underflow" << endl;
+            return;
+        }
 
-//         cout << "Deleted Element = " << arr[top] << endl;
-//         top--;
-//     }
+        cout << "Deleted Element = " << arr[top] << endl;
+        top--;
+    }
 
-//     void display()
-//     {
-//         if(top == -1)
-//         {
-//             cout << "Stack is Empty" << endl;
-//             return;
-//         }
+    void display()
+    {
+        if(top == -1)
+        {
+            cout << "Stack is Empty" << endl;
+            return;
+        }
 
-//         cout << "Stack Elements : ";
+        cout << "Stack Elements : ";
 
-//         for(int i = top; i >= 0; i--)
-//         {
-//             cout << arr[i] << " ";
-//         }
+        for(int i = top; i >= 0; i--)
+        {
+            cout << arr[i] << " ";
+        }
 
-//         cout << endl;
-//     }
-// };
+        cout << endl;
+    }
+};
 
-// int main()
-// {
-//     int n;
+int main()
+{
+    int n;
 
-//     cout << "Enter Stack Size : ";
-//     cin >> n;
+    cout << "Enter Stack Size : ";
+    cin >> n;
 
-//     Stack s(n);
+    Stack s(n);
 
-//     s.push(10);
-//     s.push(20);
-//     s.push(30);
+    s.push(10);
+    s.push(20);
+    s.push(30);
 
-//     s.display();
+    s.display();
 
-//     s.pop();
+    s.pop();
 
-//     s.display();
+    s.display();
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 #include <iostream>
@@ -163,11 +163,4 @@ int main(){
     }while(ch!=4);
 }
 
-#include <iostream>
-using namespace std;
-class Node{
-    int data;
-    Node*next;
-    
-};
 
