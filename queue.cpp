@@ -13,21 +13,21 @@ using namespace std;
         return front==-1;
     }
     bool isFull(){
-        return rear=SIZE-1;
+        return rear==SIZE-1;
     }
     void enqueue(int info){
-        if(rear==SIZE-1){
+        if(isFull()){
             cout<<"Queue is full"<<endl;
             return;
         }
-        if(front==-1)
+        if(isEmpty())
         front=front+1;
     rear=rear+1;
     data[rear]=info;
     }
     int dequeue(){
         int item;
-        if(front==-1){
+        if(isEmpty()){
             cout<<endl<<"Queue is empty"<<endl;
             return -1;
         }

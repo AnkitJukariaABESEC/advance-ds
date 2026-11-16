@@ -37,7 +37,7 @@ public:
     int push(int data)
     {
         Node *newNode = new Node(data);
-        newNode->next = top;
+        newNode->next = top;       
         top = newNode;
         return data;
     }
